@@ -1,0 +1,22 @@
+<div class="container mt-5">
+<div class="jumbotron">
+  <h1 class="display-4">TIC TAC TOE</h1>
+  <p class="lead"> Ready for a new challenge!!!</p>
+  <hr class="my-4">
+
+  <% if current_user %>
+   <%= link_to "Play a new Game",game_path %>
+   </br>
+   <%= link_to "Logout",destroy_user_session_path , method: :delete %>
+  <% else %>
+   <%= link_to "Create an Account",new_user_registration_path %>
+   <br/>
+   <%= link_to "Login",new_user_session_path %>
+  <% end %>
+
+   
+
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+ 
+</div>
+</div>
